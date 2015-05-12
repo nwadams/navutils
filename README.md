@@ -35,6 +35,7 @@ Then Override getSupportParentActivityIntent to change the intent
 public Intent getSupportParentActivityIntent() {
     Intent intent = super.getSupportParentActivityIntent();
     if (intent != null) {
+        // add clear top flag so it doesn't create new instance of parent.
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     }
     return intent;
