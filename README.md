@@ -1,7 +1,7 @@
 # navutils
 Android Navigation Utils examples
 
-## Web Intents
+### Web Intents
 
 Define PARENT_ACTIVITY in manifest as described [here](http://developer.android.com/training/implementing-navigation/ancestral.html)
 
@@ -51,7 +51,7 @@ Parent navigation does not work when starting from adb ex:
 `adb shell am start -a android.intent.action.VIEW -d "example://test" ca.nickadams.navutils`
 
 
-## Push Notifications
+### Push Notifications
 
 Intent for push notification handling
 
