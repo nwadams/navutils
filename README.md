@@ -54,6 +54,7 @@ Parent navigation does not work when starting from adb ex:
 ### Push Notifications
 
 Intent for push notification handling
+taken from guide [here](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)
 
 ```
 Intent activityIntent = new Intent(this, ChildActivity.class);
