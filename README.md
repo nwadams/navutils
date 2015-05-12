@@ -1,6 +1,10 @@
 # navutils
 Android Navigation Utils examples
 
+todo: Make a library that allows full dynamic control for custom intents
+
+## Android System way using manifest tags
+
 ### Web Intents
 
 Define PARENT_ACTIVITY in manifest as described [here](http://developer.android.com/training/implementing-navigation/ancestral.html)
@@ -72,7 +76,7 @@ PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLA
 
 We could use `finish()` instead of `NavUtils.NavigateUpTo(Activity sourceActivity, Intent upIntent)` but
 that would require us to be 100% certain that the parent activity is already running. If possible
-it is advised to use the default impl. 
+it is advised to use the default impl.
 
 The [TaskStackBuilder](http://developer.android.com/reference/android/support/v4/app/TaskStackBuilder.html) does
 `context.startActivities()` which allows us to be able to build the correct parent stack. We could build
