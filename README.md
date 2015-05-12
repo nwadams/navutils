@@ -68,3 +68,9 @@ stackBuilder.addNextIntent(activityIntent);
 PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
 ```
 
+The [TaskStackBuilder](http://developer.android.com/reference/android/support/v4/app/TaskStackBuilder.html) does
+`context.startActivities()` which allows us to be able to build the correct parent stack. We could build
+these manually if we desired instead of using the ancestral parent navigation.
+
+For Activities that can have multiple parents a default should be implemented as the parent in the manifest and it can be overridden in the
+Activity as required.
