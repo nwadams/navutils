@@ -1,6 +1,7 @@
 # navutils
 Android Navigation Utils examples
 
+## Web Intents
 
 Define PARENT_ACTIVITY in manifest as described [here](http://developer.android.com/training/implementing-navigation/ancestral.html)
 
@@ -45,4 +46,24 @@ public Intent getSupportParentActivityIntent() {
 The Parent activity could also be defined as SingleTop and then you wouldn't need to clear top
 as it would be done automatically.
 
+Note:
+Parent navigation does not work when starting from adb ex:
+`adb shell am start -a android.intent.action.VIEW -d "example://test" ca.nickadams.navutils`
+
+
+## Push Notifications
+
+Intent for push notification handling
+
+```
+Intent activityIntent = new Intent(this, ChildActivity.class);
+
+TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+// Adds the back stack for the Intent (but not the Intent itself)
+stackBuilder.addParentStack(ChildActivity.class);
+// Adds the Intent that starts the Activity to the top of the stack
+stackBuilder.addNextIntent(activityIntent);
+
+PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
+```
 

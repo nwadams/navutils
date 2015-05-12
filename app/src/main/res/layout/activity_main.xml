@@ -7,8 +7,14 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_child"
         android:text="launch child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_notification"
+        android:text="post notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
