@@ -68,6 +68,12 @@ stackBuilder.addNextIntent(activityIntent);
 PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
 ```
 
+### How it all works
+
+We could use `finish()` instead of `NavUtils.NavigateUpTo(Activity sourceActivity, Intent upIntent)` but
+that would require us to be 100% certain that the parent activity is already running. If possible
+it is advised to use the default impl. 
+
 The [TaskStackBuilder](http://developer.android.com/reference/android/support/v4/app/TaskStackBuilder.html) does
 `context.startActivities()` which allows us to be able to build the correct parent stack. We could build
 these manually if we desired instead of using the ancestral parent navigation.
