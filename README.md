@@ -40,9 +40,9 @@ public Intent getSupportParentActivityIntent() {
     }
     return intent;
 }
+```
 
 The Parent activity could also be defined as SingleTop and then you wouldn't need to clear top
 as it would be done automatically.
-```
 
 
