@@ -17,7 +17,7 @@ Define PARENT_ACTIVITY in manifest as described [here](http://developer.android.
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <!-- Accepts URIs that begin with "example://gizmos" -->
+        <!-- Accepts URIs that begin with "example://test" -->
         <data android:scheme="example"
             android:host="test" />
     </intent-filter>
