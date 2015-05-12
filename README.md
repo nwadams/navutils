@@ -4,6 +4,9 @@ Android Navigation Utils examples
 
 Define PARENT_ACTIVITY in manifest as described [here](http://developer.android.com/training/implementing-navigation/ancestral.html)
 
+Web Intent to test with
+https://applinktest.appspot.com/app-link.html?url=android-app%3A%2F%2Fca.nickadams.navutils%2Fexample%2Ftest
+
 ```
 <activity
     android:name=".ChildActivity"
